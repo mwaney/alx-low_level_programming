@@ -1,18 +1,24 @@
 #include <stdio.h>
 
-int main() {
-    char c;
+/**
+ * main - Entry point
+ *
+ * This program prints all lowercase letters using a for loop and putchar.
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	char c;
 
-    for (c = 'a'; c <= 'z'; c++)
-    {
-	    if (c == 'e' || c == 'q')
-	    {
-		    continue;
-	    }
-	    putchar(c);
-
-    }
-    putchar('\n');
-
-    return 0;
+	for (c = 'a'; c <= 'z'; c++)
+	{
+		if (c == 'e' || c == 'q')
+		{
+			continue;
+		}
+		putchar(c);
+	}
+	putchar('\n');
+	return 0;
 }

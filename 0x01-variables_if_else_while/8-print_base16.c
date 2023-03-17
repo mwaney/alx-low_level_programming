@@ -1,12 +1,13 @@
 #include <stdio.h>
 /**
- * main: Prints numbers using putchar
+ * main - Prints numbers using putchar
  *
  * Return: 0 when successfull
  */
 int main(void)
 {
 	char i;
+
 	for (i = '0'; i <='9'; i++)
 	{
 		putchar(i);
@@ -18,4 +19,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-

@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main : Entry point
+ * main - Entry point
  *
  * This program prints numbers from 0 to 9.
  *
@@ -11,7 +11,7 @@ int main(void)
 {
 	int i;
 
-	for(i=0; i<10; i++)
+	for(i = 0; i < 10; i++)
 	{
 		printf("%d", i);
 	}

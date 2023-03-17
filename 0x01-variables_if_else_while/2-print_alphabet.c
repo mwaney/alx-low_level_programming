@@ -1,13 +1,13 @@
 #include <stdio.h>
 /**
  * main : Entry point
- *
+ * description goes here
  * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-       	char c;
+	char c;
 	for (c = 'a'; c <= 'z'; c++)
 	{
 		putchar(c);

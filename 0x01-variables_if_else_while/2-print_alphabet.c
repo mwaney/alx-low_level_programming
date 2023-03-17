@@ -1,13 +1,12 @@
 #include <stdio.h>
 
 /**
- * main : Entry point
+ * main - Entry point
  *
- * This program prints all lowercase letters using a for loop and putchar
+ * This program prints all lowercase letters using a for loop and putchar.
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	char c;

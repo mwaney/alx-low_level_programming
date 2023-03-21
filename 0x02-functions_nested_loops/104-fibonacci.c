@@ -13,14 +13,14 @@ int main(void)
 	printf("%lu, %lu, ", b, d);
 	for (count = 2; count < 98; count++)
 	{
-		if (b + bk2 > LARGEST || c > 0 || a > 0)
+		if (b + d > LARGEST || c > 0 || a > 0)
 		{
 			hold1 = (b + d) / LARGEST;
 			hold2 = (b + d) % LARGEST;
 			hold3 = a + c + hold1;
 			a = c;
 			c = hold3;
-			b = d
+			b = d;
 			d = hold2;
 			printf("%lu%010lu", c, d);
 		}

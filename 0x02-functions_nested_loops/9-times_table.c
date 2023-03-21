@@ -2,44 +2,30 @@
 
 /**
  * times_table - program that prints the times table
- * Returns: voi
+ * Returns: void
  */
 void times_table(void)
 {
+	int row, col, prod;
+
 	for (row = 0; row <= 9; row++)
 	{
-		for (col = 0; col <= 9; col++)
+		_putchar(48);
+		for (col = 1; col <=9; col++)
 		{
-			int prod = row * col;
-			int num;
-
-			if (prod == 0)
+			prod = row * col;
+			_putchar(44);
+			_putchar(32);
+			if(prod <= 9)
 			{
-				num = 0;
-				_putchar(num + '0');
+				_putchar(32);
+				_putchar(prod + 48);
 			}
 			else
 			{
-				int prod_num = 0;
-
-				while (prod > 0)
-				{
-					num = prod % 10;
-					prod /= 10;
-					prod_num++;
-				}
-				prod = row * col;
-
-				while (prod_num > 0)
-				{
-					num = prod / pow(10, prod_num - 1);
-					prod %= (int) pow(10, prod_num - 1);
-					prod_num--;
-					_putchar(num + '0');
-				}
+				_putchar((prod / 10) + 48);
+				_putchar((prod % 10) + 48);
 			}
-			_putchar(',');
-			_putchar(' ');
 		}
 		_putchar('\n');
 	}

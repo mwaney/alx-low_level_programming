@@ -1,17 +1,19 @@
 #include "main.h"
 
 /**
- *  int _abs- function that tests if an alphabet is lowercase
- * @int: The integer to test for
+ * _abs- function that tests if an alphabet is lowercase
+ * @n: The integer to test for
  * Return: 1 if character is lowercase and 0 if otherwise
  */
-int _abs(int)
+int _abs(int n)
 {
-	if (int < 0){
-		return int * -1;
+	if (n < 0)
+	{
+		n = n * -1;
+		return (n);
 	}
 	else
 	{
-		return int;
+		return (n);
 	}
 }

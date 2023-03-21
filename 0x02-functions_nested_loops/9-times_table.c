@@ -11,12 +11,12 @@ void times_table(void)
 	for (row = 0; row <= 9; row++)
 	{
 		_putchar(48);
-		for (col = 1; col <=9; col++)
+		for (col = 1; col <= 9; col++)
 		{
 			prod = row * col;
 			_putchar(44);
 			_putchar(32);
-			if(prod <= 9)
+			if (prod <= 9)
 			{
 				_putchar(32);
 				_putchar(prod + 48);

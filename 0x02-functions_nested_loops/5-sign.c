@@ -2,7 +2,7 @@
 
 /**
  * print_sign - function that tests if an alphabet is lowercase
- * @n: The integer to test for 
+ * @n: The integer to test for
  * Return: 1 if character is lowercase and 0 if otherwise
  */
 

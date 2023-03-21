@@ -2,6 +2,7 @@
 
 /**
  * _islower - function that tests if an alphabet is lowercase
+ * @param c
  * Return: 1 if character is lowercase and 0 if otherwise
  */
 
@@ -9,10 +10,11 @@ int _islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{
-		return 1;
+		return (1);
 	}
-	else{
-		return 0;
+	else
+	{
+		return (0);
 	}
 
 }

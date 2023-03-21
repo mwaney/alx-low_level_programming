@@ -4,6 +4,7 @@
  * main - prints _putcchar with a new line character
  *
  * Return: always 0 (Success)
+ */
 
 int main(void)
 {

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncat - function to concatenate 2 strings with a limit 
+ * _strncat - function to concatenate 2 strings with a limit
  * @dest: destination pointer
  * @src: source pointer
  * @n: limit of characters to add to first string

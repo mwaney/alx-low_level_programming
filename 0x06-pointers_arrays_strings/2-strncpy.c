@@ -5,6 +5,7 @@
  * @dest: variable to destination string
  * @src: variable to source
  * @n: number of characters
+ * Return: character array
  */
 char *_strncpy(char *dest, char *src, int n)
 {

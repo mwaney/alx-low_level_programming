@@ -5,6 +5,7 @@
  * @dest: destination pointer
  * @src: source pointer
  * @n: limit of characters to add to first string
+ * Reurn: an array of characters
  */
 char *_strncat(char *dest, char *src, int n)
 {

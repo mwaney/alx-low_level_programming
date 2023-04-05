@@ -13,14 +13,15 @@ int helper(int n, int s, int e)
 	int m = (s + e) / 2;
 	int square = m * m;
 
+	if (s > e)
+		return (s - 1);
+
 	if (square == n)
 		return (m);
-	else if (s >= e)
-		return (e);
 	else if (square < n)
-		return (helper(n, m + 1, e));
+		return (helper(n, m+1, e));
 	else
-		return (helper(n, s, e - 1));
+		return (helper(n, s, m - 1));
 }
 
 /**
@@ -30,7 +31,6 @@ int helper(int n, int s, int e)
  */
 int _sqrt_recursion(int n)
 {
-	int sqroot;
 
 	if (n < 0)
 	{
@@ -41,7 +41,5 @@ int _sqrt_recursion(int n)
 		return (n);
 	}
 
-	sqroot = helper(n, 1, n);
-
-	return (sqroot * sqroot == n ? sqroot : -1);
+	return (helper(n, 1, (n / 2) + 1));
 }

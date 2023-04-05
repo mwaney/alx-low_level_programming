@@ -41,7 +41,7 @@ int _sqrt_recursion(int n)
 		return (n);
 	}
 
-	sqroot = helper(n, 1, n / 2);
+	sqroot = helper(n, 1, n);
 
 	return (sqroot * sqroot == n ? sqroot : -1);
 }

@@ -3,25 +3,17 @@
 /**
  * helper - function that checks probability of a square root
  * @n: number to get the square root from
- * @s: start pointer
- * @e: end pointer
+ * @ans: The answer which is our root
  * Return: the square root
  */
 
-int helper(int n, int s, int e)
+int helper(int n, int ans)
 {
-	int m = (s + e) / 2;
-	int square = m * m;
-
-	if (s > e)
-		return (s - 1);
-
-	if (square == n)
-		return (m);
-	else if (square < n)
-		return (helper(n, m+1, e));
-	else
-		return (helper(n, s, m - 1));
+	if ((ans * ans) == n)
+		return (ans);
+	if (ans == n / 2)
+		return (-1);
+	return (helper(n, ans + 1));
 }
 
 /**
@@ -31,6 +23,7 @@ int helper(int n, int s, int e)
  */
 int _sqrt_recursion(int n)
 {
+	int ans = 0;
 
 	if (n < 0)
 	{
@@ -41,5 +34,5 @@ int _sqrt_recursion(int n)
 		return (n);
 	}
 
-	return (helper(n, 1, (n / 2) + 1));
+	return (helper(n, ans));
 }

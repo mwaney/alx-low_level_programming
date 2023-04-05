@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * wildcmp - compares two strings and returns 1 if identical 
+ * helper - compares two strings and returns 1 if identical
  * 0 if they are not
  * @s1: first string
  * @s2: second string
  * Return: 1 if identical 0 if not
  */
-int helper (char *s1, char *s2)
+int helper(char *s1, char *s2)
 {
 	if (*s1 == '\0' && *s2 == '\0')
 		return (1);
@@ -23,7 +23,14 @@ int helper (char *s1, char *s2)
 	return (0);
 }
 
+/**
+ * wildcmp - compares two strings and returns 1 if identical
+ * 0 if they are not
+ * @s1: first string
+ * @s2: second string
+ * Return: 1 if identical 0 if not
+ */
 int wildcmp(char *s1, char *s2)
 {
-    return (helper(s1, s2));
+	return (helper(s1, s2));
 }

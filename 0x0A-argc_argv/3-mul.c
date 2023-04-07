@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * main - prints  product of 2 numbers 
+ * main - prints  product of 2 numbers
  * @argc: argument count
  * @argv: argument vector
  * Return: 0 Success 1 Failure
@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	{
 		prod *= _atoi(argv[i]);
 	}
-	if (argc > 3 || argc == 1)
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);

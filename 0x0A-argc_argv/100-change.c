@@ -5,14 +5,16 @@
 int getChange(int change);
 
 /**
- * main - prints the minimum number of coins to make change for an amount of money.
+ * main - prints the minimum number of coins to
+ * make change for an amount of money.
  * @argc: argument count
  * @argv: argument vector
  * Return: 0 Success 1 Error
  */
 int main(int argc, char *argv[])
 {
-	int cents; 
+	int cents;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -22,7 +24,12 @@ int main(int argc, char *argv[])
 	printf("%d\n", getChange(cents));
 	return (0);
 }
-
+/**
+ * getChange - prints the minimum number of coins to make
+ * change for an amount of money.
+ * @change: total amount
+ * Return: 0 Success or solution
+ */
 int getChange(int change)
 {
 	int solution = 0;

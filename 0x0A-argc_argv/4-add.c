@@ -20,10 +20,6 @@ int main(int argc, char *argv[])
 			{
 				sum += _atoi(argv[i]);
 			}
-			if (_isdigit(*argv[i]) && _atoi(argv[i]) < 0)
-			{
-				continue;
-			}		
 			else
 			{
 				printf("Error\n");

@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include "main.h"
+#include <string.h>
+
+int contain_symbol(char *s);
 
 /**
  * main - adds positive numbers
@@ -16,7 +19,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (_isdigit(*argv[i]) && _atoi(argv[i]) >= 0)
+			if (contain_symbol(argv[i]))
 			{
 				sum += _atoi(argv[i]);
 			}
@@ -84,4 +87,21 @@ int _atoi(char *s)
 		return (0);
 
 	return (n);
+}
+
+/**
+ * contain_symbol - checks if all characters are digits
+ * @s: an array of character
+ * Return: 0 Success
+ */
+int contain_symbol(char *s)
+{
+	unsigned int i;
+
+	for (i = 0; i < strlen(s); i++)
+	{
+		if (!_isdigit(s[i]))
+			return (0);
+	}
+	return (1);
 }

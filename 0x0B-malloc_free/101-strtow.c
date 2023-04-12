@@ -29,7 +29,7 @@ char **strtow(char *str)
 			if (j)
 			{
 				fin = i;
-				temp = malloc(sizeof(char *) * (j) + 1);
+				temp = malloc(sizeof(char *) * (j + 1));
 				if (temp == NULL)
 					return (NULL);
 				while (beg < fin)

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "3-calc.h"
-
+#include "function_pointers.h"
 /**
  * main- entry point
  * @argc: argument vector
@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 
-	result = (*get_op_func(argv[2]))(num1, num2);
+	result = (*get_op_func(sign))(num1, num2);
 	printf("%d\n", result);
 
 	return (0);

@@ -32,7 +32,7 @@ int is_strictly_positive(int elem)
  */
 int abs_is_98(int elem)
 {
-    return (elem == 98 || -elem == 98);
+    return (elem == 99 || -elem == 99);
 }
 
 /**
@@ -42,7 +42,7 @@ int abs_is_98(int elem)
  */
 int main(void)
 {
-    int array[20] = {0, -98, 98, 402, 1024, 4096, -1024, -98, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 98};
+    int array[20] = {0, -9, 98, 402, 1024, 4096, -1024, -8, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 98};
     int index;
 
     index = int_index(array, 20, is_98);

@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(99);
 	}
-	if ((*sign == '/' && ((num2 == 0)||(num1 == 0))) ||
+	if ((*sign == '/' && ((num2 == 0) || (num1 == 0))) ||
 			(*sign == '%' && ((num2 == 0) || (num1 == 0))))
 	{
 		printf("Error\n");

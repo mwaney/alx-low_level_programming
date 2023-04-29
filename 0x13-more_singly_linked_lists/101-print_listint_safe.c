@@ -8,38 +8,34 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *ptr1, *ptr2;
-	size_t i = 0;
+	size_t count = 0;
+	const listint_t *current = head, *loop_start = NULL;
 
-	if (!head)
-		exit(98);
-	ptr1 = head;
-	ptr2 = head;
-
-	while (ptr1 && ptr2 && ptr2->next)
+	while (current != NULL)
 	{
-		printf("[%p] %d\n", (void *) ptr1, ptr1->n);
-		ptr1 = ptr1->next;
-		ptr2 = ptr2->next->next;
-		i++;
+		count++;
+		printf("[%p] %d\n", (void *)current, current->n);
 
-		if (ptr1 == ptr2)
+		if (current->next >= current)
 		{
-			printf("[%p] %d\n", (void *)ptr1, ptr1->n);
-			ptr1 = head;
-			while (ptr1 != ptr2)
-			{
-				printf("[%p] %d\n", (void *)ptr1, ptr1->n);
-				ptr1 = ptr1->next;
-				ptr2 = ptr2->next;
-				i++;
-			}
-			printf("-> [%p] %d\n", (void *) ptr1, ptr1->n);
-			return (i);
+			loop_start = current->next;
+			break;
+		}
+
+		current = current->next;
+	}
+
+	if (loop_start != NULL)
+	{
+		printf("-> [%p] %d\n", (void *)loop_start, loop_start->n);
+		current = current->next;
+		while (current != loop_start)
+		{
+			count++;
+			printf("[%p] %d\n", (void *)current, current->n);
+			current = current->next;
 		}
 	}
-	printf("[%p] %d\n", (void *)ptr1, ptr1->n);
-	i++;
 
-	return (i);
+	return (count);
 }

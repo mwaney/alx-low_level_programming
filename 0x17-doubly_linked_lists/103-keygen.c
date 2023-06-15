@@ -2,7 +2,7 @@
 #include "lists.h"
 /**
  * main - function generates a key for a given input
- * @argcc: argument count.
+ * @argc: argument count.
  * @argv: argument vector
  * Return: Always 0.
  */
